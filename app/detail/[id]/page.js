@@ -1,4 +1,5 @@
 import { useFecth } from "@/assets/fetch";
+import Image from "next/image";
 import Link from "next/link";
 
 async function Detail({ params }) {
@@ -16,7 +17,7 @@ async function Detail({ params }) {
         rounded-[0_0_10px_10px]"
     >
       <div className="text-[40px] pb-[20px]">- API 데이터 -</div>
-      <img src={animal?.img.src} />
+      <img src={animal?.img.src} alt={animal?.name} />
       <div className="text-[30px]">{animal.name}</div>
       <div className="text-[20px] pb-[20px] text-center">
         {animal.description}
